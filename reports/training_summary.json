@@ -1,0 +1,40 @@
+{
+  "patchtst_frozen_hi_only": {
+    "best_epoch": 3,
+    "best_val_rmse": 2646.6966139368633,
+    "elapsed_seconds": 75.96006727218628
+  },
+  "patchtst_frozen_multivariate": {
+    "best_epoch": 1,
+    "best_val_rmse": 2564.2476753738197,
+    "elapsed_seconds": 236.86066269874573
+  },
+  "patchtst_lora_hi_only": {
+    "best_epoch": 41,
+    "best_val_rmse": 3044.7873082761575,
+    "elapsed_seconds": 1454.828183889389
+  },
+  "patchtst_lora_multivariate": {
+    "best_epoch": 31,
+    "best_val_rmse": 3870.789534344912,
+    "elapsed_seconds": 1660.2851996421814
+  },
+  "patchtst_full_hi_only": {
+    "best_epoch": 1,
+    "best_val_rmse": 2985.4299088568923,
+    "elapsed_seconds": 3047.7488675117493
+  },
+  "patchtst_full_multivariate": {
+    "best_epoch": 7,
+    "best_val_rmse": 3866.2306019446287,
+    "elapsed_seconds": 270.74736857414246
+  },
+  "classical_svr": {
+    "val_rmse": 4021.1754267433366,
+    "val_mae": 2535.2602803649092
+  },
+  "classical_rf": {
+    "val_rmse": 1993.120844069563,
+    "val_mae": 1518.7829182176652
+  }
+}

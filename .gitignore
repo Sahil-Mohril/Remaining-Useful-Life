@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Model checkpoints (large binaries)
+models/*.pt
+models/*.bin
+models/*.safetensors
+models/*/
+
+# Processed data (can be regenerated)
+data/processed/
+data/interim/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+*.log
+
+# TensorBoard
+runs/
+
+# Jupyter
+.ipynb_checkpoints/

@@ -1,0 +1,178 @@
+# ============================================================================
+# Bearing RUL Prediction Pipeline — Central Configuration
+# ============================================================================
+# IEEE PHM 2012 Prognostic Challenge Dataset (PRONOSTIA platform)
+# All hyperparameters, paths, and seeds are centralized here.
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# Paths
+# ---------------------------------------------------------------------------
+paths:
+  project_root: "."
+  learning_set: "Learning_set"
+  test_set: "Test_set"
+  full_test_set: "Full_Test_Set"
+  processed_data: "data/processed"
+  models: "models"
+  reports: "reports"
+  figures: "reports/figures"
+
+# ---------------------------------------------------------------------------
+# Dataset metadata
+# ---------------------------------------------------------------------------
+dataset:
+  sampling_rate_hz: 25600          # Vibration sampling rate
+  samples_per_file: 2560           # Expected samples per acc_*.csv
+  recording_interval_s: 10        # Seconds between recordings
+  failure_threshold_g: 20.0       # Vibration amplitude failure criterion
+
+  # Operating conditions: (RPM, Load_N)
+  conditions:
+    1: {rpm: 1800, load_n: 4000}
+    2: {rpm: 1650, load_n: 4200}
+    3: {rpm: 1500, load_n: 5000}
+
+  # Learning set bearings (run-to-failure)
+  learning_bearings:
+    - Bearing1_1
+    - Bearing1_2
+    - Bearing2_1
+    - Bearing2_2
+    - Bearing3_1
+    - Bearing3_2
+
+  # Test set bearings (truncated mid-life)
+  test_bearings:
+    - Bearing1_3
+    - Bearing1_4
+    - Bearing1_5
+    - Bearing1_6
+    - Bearing1_7
+    - Bearing2_3
+    - Bearing2_4
+    - Bearing2_5
+    - Bearing2_6
+    - Bearing2_7
+    - Bearing3_3
+
+  # Official actual RULs for test bearings (seconds)
+  actual_rul:
+    Bearing1_3: 5730
+    Bearing1_4: 339
+    Bearing1_5: 1610
+    Bearing1_6: 1460
+    Bearing1_7: 7570
+    Bearing2_3: 7530
+    Bearing2_4: 1390
+    Bearing2_5: 3090
+    Bearing2_6: 1290
+    Bearing2_7: 580
+    Bearing3_3: 820
+
+  # Bearing condition mapping
+  bearing_condition:
+    Bearing1_1: 1
+    Bearing1_2: 1
+    Bearing1_3: 1
+    Bearing1_4: 1
+    Bearing1_5: 1
+    Bearing1_6: 1
+    Bearing1_7: 1
+    Bearing2_1: 2
+    Bearing2_2: 2
+    Bearing2_3: 2
+    Bearing2_4: 2
+    Bearing2_5: 2
+    Bearing2_6: 2
+    Bearing2_7: 2
+    Bearing3_1: 3
+    Bearing3_2: 3
+    Bearing3_3: 3
+
+# ---------------------------------------------------------------------------
+# Feature extraction
+# ---------------------------------------------------------------------------
+features:
+  # Envelope analysis band-pass filter (Hz)
+  envelope_bandpass_low: 500
+  envelope_bandpass_high: 5000
+
+  # FFT band-power ranges (Hz) — defect-relevant frequencies
+  fft_bands:
+    bpfo: [100, 200]      # Ball Pass Frequency Outer race
+    bpfi: [200, 400]      # Ball Pass Frequency Inner race
+    bsf: [400, 800]       # Ball Spin Frequency
+
+  # Health Index construction
+  top_k_features: 8       # Number of most monotonic features for HI
+  hi_smoothing_window: 5  # Moving average window for HI smoothing
+
+# ---------------------------------------------------------------------------
+# Model — PatchTST
+# ---------------------------------------------------------------------------
+model:
+  # PatchTST architecture
+  num_input_channels: 1     # 1 for HI-only, >1 for multivariate
+  context_length: 64        # Number of timesteps (each = 10s recording)
+  patch_length: 16
+  patch_stride: 8
+  d_model: 64
+  num_attention_heads: 4
+  num_hidden_layers: 3
+  dropout: 0.1
+  num_targets: 1            # Single scalar: normalized RUL
+
+  # LoRA config (for peft fine-tuning)
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.1
+
+# ---------------------------------------------------------------------------
+# Training
+# ---------------------------------------------------------------------------
+training:
+  # General
+  batch_size: 32
+  num_epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  max_grad_norm: 1.0
+
+  # Loss
+  loss: "huber"            # "mse" or "huber"
+  huber_delta: 1.0
+
+  # Early stopping
+  patience: 15
+  min_delta: 0.0001
+
+  # Sliding window
+  window_size: 64          # Same as context_length
+  window_stride: 1         # Stride for training windows
+
+  # Target normalization
+  target_transform: "log"  # "log" or "linear" normalization
+
+  # Validation
+  val_bearing: "Bearing1_2"  # Default val bearing for simple split
+
+  # Ablation settings
+  ablations:
+    strategies: ["frozen", "lora", "full"]
+    input_modes: ["hi_only", "multivariate"]
+    window_lengths: [32, 64]
+
+# ---------------------------------------------------------------------------
+# Inference
+# ---------------------------------------------------------------------------
+inference:
+  # Use last N windows for ensemble prediction
+  ensemble_last_n: 5
+  rolling_prediction: true  # Generate full RUL trajectory
+
+# ---------------------------------------------------------------------------
+# Reproducibility
+# ---------------------------------------------------------------------------
+seed: 42

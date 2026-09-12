@@ -1,0 +1,794 @@
+{
+  "Linear Degradation": {
+    "overall_score": 0.0495,
+    "regression_metrics": {
+      "rmse": 64898.091721732104,
+      "mae": 45917.312714342675,
+      "mape": 1921.854479618489,
+      "r2": -607.425920035163
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 1880.4,
+        "percent_error": 67.18,
+        "A_i": 0.0975
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 100000.0,
+        "percent_error": -6111.18,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 21542.9,
+        "percent_error": -1375.54,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 100000.0,
+        "percent_error": -1221.0,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 100000.0,
+        "percent_error": -1228.02,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 1007.1,
+        "percent_error": 27.54,
+        "A_i": 0.385
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 100000.0,
+        "percent_error": -3136.25,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 100000.0,
+        "percent_error": -7651.94,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 1286.1,
+        "percent_error": -121.74,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      }
+    ]
+  },
+  "SVR": {
+    "overall_score": 0.0354,
+    "regression_metrics": {
+      "rmse": 6639.779743406013,
+      "mae": 5309.983988733881,
+      "mape": 485.1253233951131,
+      "r2": -5.368705984423794
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 6785.6,
+        "percent_error": -18.42,
+        "A_i": 0.0778
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 6621.1,
+        "percent_error": -1853.12,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 10725.9,
+        "percent_error": -566.21,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 4214.8,
+        "percent_error": 44.03,
+        "A_i": 0.2174
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 16306.6,
+        "percent_error": -427.72,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 5640.6,
+        "percent_error": -337.25,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 10297.7,
+        "percent_error": -1675.46,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 1756.1,
+        "percent_error": -114.16,
+        "A_i": 0.0
+      }
+    ]
+  },
+  "Random Forest": {
+    "overall_score": 0.0452,
+    "regression_metrics": {
+      "rmse": 5158.451638383284,
+      "mae": 3915.097906530331,
+      "mape": 361.65337567885956,
+      "r2": -2.8439929305591476
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 7128.9,
+        "percent_error": -24.41,
+        "A_i": 0.0339
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 29.4,
+        "percent_error": 91.33,
+        "A_i": 0.0422
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 5617.7,
+        "percent_error": -248.93,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 2371.3,
+        "percent_error": -62.42,
+        "A_i": 0.0002
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 3595.3,
+        "percent_error": 52.51,
+        "A_i": 0.1621
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 8264.1,
+        "percent_error": -9.75,
+        "A_i": 0.2588
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 7564.5,
+        "percent_error": -444.21,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 9177.5,
+        "percent_error": -197.01,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 4931.6,
+        "percent_error": -282.29,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 13170.0,
+        "percent_error": -2170.69,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 4056.1,
+        "percent_error": -394.65,
+        "A_i": 0.0
+      }
+    ]
+  },
+  "PatchTST Frozen (HI)": {
+    "overall_score": 0.1017,
+    "regression_metrics": {
+      "rmse": 2747.4884357594433,
+      "mae": 2342.6106896797264,
+      "mape": 183.90741059039556,
+      "r2": -0.09047471504521387
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 3107.7,
+        "percent_error": 45.76,
+        "A_i": 0.2047
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 2857.7,
+        "percent_error": -742.97,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 3123.7,
+        "percent_error": -94.02,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 2603.2,
+        "percent_error": -78.3,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 2327.5,
+        "percent_error": 69.25,
+        "A_i": 0.0907
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 2792.5,
+        "percent_error": 62.91,
+        "A_i": 0.113
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 3499.0,
+        "percent_error": -151.73,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 2784.3,
+        "percent_error": 9.89,
+        "A_i": 0.7098
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 2240.1,
+        "percent_error": -73.65,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 3162.7,
+        "percent_error": -445.29,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 2863.4,
+        "percent_error": -249.2,
+        "A_i": 0.0
+      }
+    ]
+  },
+  "PatchTST Frozen (Multi)": {
+    "overall_score": 0.1174,
+    "regression_metrics": {
+      "rmse": 2858.9768176854113,
+      "mae": 2588.14646397827,
+      "mape": 239.73041975521076,
+      "r2": -0.18076948607554955
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 3251.3,
+        "percent_error": 43.26,
+        "A_i": 0.2233
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 3925.9,
+        "percent_error": -1058.07,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 3708.2,
+        "percent_error": -130.32,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 3027.7,
+        "percent_error": -107.37,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 2889.0,
+        "percent_error": 61.84,
+        "A_i": 0.1173
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 3426.6,
+        "percent_error": 54.49,
+        "A_i": 0.1513
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 3026.3,
+        "percent_error": -117.72,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 2890.1,
+        "percent_error": 6.47,
+        "A_i": 0.7992
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 3396.6,
+        "percent_error": -163.3,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 3773.5,
+        "percent_error": -550.6,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 3637.4,
+        "percent_error": -343.58,
+        "A_i": 0.0
+      }
+    ]
+  },
+  "PatchTST LoRA (HI)": {
+    "overall_score": 0.0312,
+    "regression_metrics": {
+      "rmse": 3882.7171952360654,
+      "mae": 2855.3636363636365,
+      "mape": 100.0,
+      "r2": -1.1777868537403506
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 0.0,
+        "percent_error": 100.0,
+        "A_i": 0.0312
+      }
+    ]
+  },
+  "PatchTST LoRA (Multi)": {
+    "overall_score": 0.0313,
+    "regression_metrics": {
+      "rmse": 3882.313606317902,
+      "mae": 2854.8504734694748,
+      "mape": 99.95820581002718,
+      "r2": -1.177334137296743
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 0.6,
+        "percent_error": 99.99,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 0.4,
+        "percent_error": 99.87,
+        "A_i": 0.0314
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 0.5,
+        "percent_error": 99.97,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 0.5,
+        "percent_error": 99.97,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 0.6,
+        "percent_error": 99.99,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 0.6,
+        "percent_error": 99.99,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 0.5,
+        "percent_error": 99.96,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 0.4,
+        "percent_error": 99.99,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 0.6,
+        "percent_error": 99.96,
+        "A_i": 0.0313
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 0.6,
+        "percent_error": 99.9,
+        "A_i": 0.0314
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 0.4,
+        "percent_error": 99.95,
+        "A_i": 0.0313
+      }
+    ]
+  },
+  "PatchTST Full FT (HI)": {
+    "overall_score": 0.2012,
+    "regression_metrics": {
+      "rmse": 4033.5635588623645,
+      "mae": 3507.9472970313104,
+      "mape": 397.44739549649324,
+      "r2": -1.3502911386904568
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 5377.0,
+        "percent_error": 6.16,
+        "A_i": 0.8077
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 5647.3,
+        "percent_error": -1565.86,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 7998.2,
+        "percent_error": -396.78,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 6012.1,
+        "percent_error": -311.79,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 5695.2,
+        "percent_error": 24.77,
+        "A_i": 0.4239
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 7489.0,
+        "percent_error": 0.54,
+        "A_i": 0.9813
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 4828.3,
+        "percent_error": -247.36,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 5899.7,
+        "percent_error": -90.93,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 6389.1,
+        "percent_error": -395.28,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 5904.4,
+        "percent_error": -917.99,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 4218.5,
+        "percent_error": -414.45,
+        "A_i": 0.0
+      }
+    ]
+  },
+  "PatchTST Full FT (Multi)": {
+    "overall_score": 0.2055,
+    "regression_metrics": {
+      "rmse": 3274.5499899303504,
+      "mae": 2461.115241038715,
+      "mape": 159.2318492754128,
+      "r2": -0.5489846120066546
+    },
+    "per_bearing": [
+      {
+        "bearing": "Bearing1_3",
+        "actual_rul": 5730,
+        "predicted_rul": 4619.7,
+        "percent_error": 19.38,
+        "A_i": 0.5109
+      },
+      {
+        "bearing": "Bearing1_4",
+        "actual_rul": 339,
+        "predicted_rul": 360.2,
+        "percent_error": -6.25,
+        "A_i": 0.4206
+      },
+      {
+        "bearing": "Bearing1_5",
+        "actual_rul": 1610,
+        "predicted_rul": 5176.6,
+        "percent_error": -221.53,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_6",
+        "actual_rul": 1460,
+        "predicted_rul": 8558.4,
+        "percent_error": -486.19,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing1_7",
+        "actual_rul": 7570,
+        "predicted_rul": 3598.0,
+        "percent_error": 52.47,
+        "A_i": 0.1623
+      },
+      {
+        "bearing": "Bearing2_3",
+        "actual_rul": 7530,
+        "predicted_rul": 4747.0,
+        "percent_error": 36.96,
+        "A_i": 0.2778
+      },
+      {
+        "bearing": "Bearing2_4",
+        "actual_rul": 1390,
+        "predicted_rul": 1494.8,
+        "percent_error": -7.54,
+        "A_i": 0.3517
+      },
+      {
+        "bearing": "Bearing2_5",
+        "actual_rul": 3090,
+        "predicted_rul": 2529.0,
+        "percent_error": 18.15,
+        "A_i": 0.533
+      },
+      {
+        "bearing": "Bearing2_6",
+        "actual_rul": 1290,
+        "predicted_rul": 5869.9,
+        "percent_error": -355.03,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing2_7",
+        "actual_rul": 580,
+        "predicted_rul": 3525.6,
+        "percent_error": -507.86,
+        "A_i": 0.0
+      },
+      {
+        "bearing": "Bearing3_3",
+        "actual_rul": 820,
+        "predicted_rul": 1149.6,
+        "percent_error": -40.19,
+        "A_i": 0.0038
+      }
+    ]
+  }
+}
