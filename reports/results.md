@@ -15,34 +15,26 @@ This report presents results from an end-to-end pipeline for predicting the Rema
 | Model | RMSE (s) | MAE (s) | MAPE (%) | R² | PHM Score |
 |-------|----------|---------|----------|-----|----------|
 | Linear Degradation | 64898 | 45917 | 1921.9 | -607.426 | 0.0495 |
-| PatchTST Frozen (HI) | 2747 | 2343 | 183.9 | -0.090 | 0.1017 |
-| PatchTST Frozen (Multi) | 2859 | 2588 | 239.7 | -0.181 | 0.1174 |
-| PatchTST Full FT (HI) | 4034 | 3508 | 397.4 | -1.350 | 0.2012 |
-| PatchTST Full FT (Multi) | 3275 | 2461 | 159.2 | -0.549 | 0.2055 |
-| PatchTST LoRA (HI) | 3883 | 2855 | 100.0 | -1.178 | 0.0312 |
-| PatchTST LoRA (Multi) | 3882 | 2855 | 100.0 | -1.177 | 0.0313 |
-| Random Forest | 5158 | 3915 | 361.7 | -2.844 | 0.0452 |
-| SVR | 6640 | 5310 | 485.1 | -5.369 | 0.0354 |
 
-**Best model**: PatchTST Full FT (Multi) (PHM Score = 0.2055)
+**Best model**: Linear Degradation (PHM Score = 0.0495)
 
 ### Per-Bearing Results (Best Model)
 
 | Bearing | Actual RUL (s) | Predicted RUL (s) | %Error | A_i |
 |---------|----------------|-------------------|--------|-----|
-| Bearing1_3 | 5730 | 4620 | 19.4 | 0.5109 |
-| Bearing1_4 | 339 | 360 | -6.2 | 0.4206 |
-| Bearing1_5 | 1610 | 5177 | -221.5 | 0.0000 |
-| Bearing1_6 | 1460 | 8558 | -486.2 | 0.0000 |
-| Bearing1_7 | 7570 | 3598 | 52.5 | 0.1623 |
-| Bearing2_3 | 7530 | 4747 | 37.0 | 0.2778 |
-| Bearing2_4 | 1390 | 1495 | -7.5 | 0.3517 |
-| Bearing2_5 | 3090 | 2529 | 18.1 | 0.5330 |
-| Bearing2_6 | 1290 | 5870 | -355.0 | 0.0000 |
-| Bearing2_7 | 580 | 3526 | -507.9 | 0.0000 |
-| Bearing3_3 | 820 | 1150 | -40.2 | 0.0038 |
+| Bearing1_3 | 5730 | 1880 | 67.2 | 0.0975 |
+| Bearing1_4 | 339 | 0 | 100.0 | 0.0312 |
+| Bearing1_5 | 1610 | 100000 | -6111.2 | 0.0000 |
+| Bearing1_6 | 1460 | 21543 | -1375.5 | 0.0000 |
+| Bearing1_7 | 7570 | 100000 | -1221.0 | 0.0000 |
+| Bearing2_3 | 7530 | 100000 | -1228.0 | 0.0000 |
+| Bearing2_4 | 1390 | 1007 | 27.5 | 0.3850 |
+| Bearing2_5 | 3090 | 100000 | -3136.2 | 0.0000 |
+| Bearing2_6 | 1290 | 100000 | -7651.9 | 0.0000 |
+| Bearing2_7 | 580 | 1286 | -121.7 | 0.0000 |
+| Bearing3_3 | 820 | 0 | 100.0 | 0.0312 |
 
-**Overall PHM Challenge Score: 0.2055**
+**Overall PHM Challenge Score: 0.0495**
 
 ### Comparison with Published Challenge Results
 
@@ -52,7 +44,7 @@ This report presents results from an end-to-end pipeline for predicting the Rema
 | GE Global Research | ~0.24 |
 | CALCE-UMD | ~0.22 |
 | Jozef Stefan Institute | ~0.15 |
-| **Our PatchTST (best)** | **0.2055** |
+| **Our PatchTST (best)** | **0.0495** |
 
 > Note: Direct comparison is approximate. Published scores vary by implementation details and are not exactly reproducible without access to original codebases.
 
