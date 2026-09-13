@@ -8,8 +8,7 @@ PatchTST time-series model from HuggingFace `transformers`.
 
 This project implements a complete ML pipeline that predicts bearing RUL from
 raw vibration sensor data using **transfer learning** — fine-tuning the
-PatchTST architecture (a Transformer-based time-series model) rather than
-training from scratch.
+PatchTST architecture 
 
 ### Architecture
 
@@ -126,6 +125,25 @@ Predictive_Maintainance/
 ├── requirements.txt
 └── README.md
 ```
+## Time Domain Features 
+<img width="5366" height="8364" alt="time_domain_distributions" src="https://github.com/user-attachments/assets/5f18a237-05d4-4ebf-b5f8-88d640a26a64" />
+<img width="4767" height="2968" alt="time_domain_trends" src="https://github.com/user-attachments/assets/466c1881-843a-4a07-980f-da66f82a1cb0" />
+
+## Frequency Domain Features
+<img width="5367" height="4164" alt="frequency_domain_distributions" src="https://github.com/user-attachments/assets/bcc87884-c13d-46f4-a6e2-2d29654bb977" /> 
+<img width="4768" height="2968" alt="frequency_domain_trends" src="https://github.com/user-attachments/assets/f47c0bf6-7975-401a-a0e6-8f24d8339d4c" />
+
+
+
+
+## Health Index Score
+weighted HI
+<img width="576" height="453" alt="image" src="https://github.com/user-attachments/assets/174fd121-ed5f-4588-bbed-fd8719fb83bb" />
+PCA HI
+<img width="567" height="453" alt="image" src="https://github.com/user-attachments/assets/24eb706c-3245-45ad-9e97-726df33605a3" />
+
+
+
 
 ## Metrics
 
@@ -143,7 +161,13 @@ The pipeline computes:
 A_i = exp(-ln(0.5) × Er/5)   if Er ≤ 0  (late → steep penalty)
 A_i = exp(+ln(0.5) × Er/20)  if Er > 0  (early → gentle penalty)
 Score = mean(A_i) across 11 test bearings
+
 ```
+<img width="903" height="542" alt="image" src="https://github.com/user-attachments/assets/6f426679-2723-40e4-aeb0-dbc9f694d22a" />
+<img width="900" height="538" alt="image" src="https://github.com/user-attachments/assets/94b9e588-9335-4b4d-b4de-d5e518fca705" />
+
+<img width="818" height="515" alt="image" src="https://github.com/user-attachments/assets/a2fa715b-1996-49d7-b9c7-568d3f1c2a02" />
+
 
 ## Citation
 
